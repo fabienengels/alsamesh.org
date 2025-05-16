@@ -7,7 +7,7 @@ const equipments = Object.values(import.meta.glob('./equipments/*.md', { eager: 
     <div class="w-[90%] max-w-[984px] mt-24">
         {equipments.map(equipment => {
             const imagePath = equipment.frontmatter.image
-              ? `/src/images/${equipment.frontmatter.image}`
+              ? `/src/images/equipments/${equipment.frontmatter.image}`
               : null;
       
             return (

@@ -1,14 +1,12 @@
 ---
 import { Image } from 'astro:assets'
 import alsace_blason from "../images/alsace_blason.png"
-import meshtastic_logo from "../images/meshtastic_logo.svg"
 ---
 <header class="mx-auto w-[95%] max-w-[984px] h-[70px] bg-gray-100 flex items-center justify-center">
     <div class="h-[90%] flex items-center py-2 bg-white w-full mt-12 rounded-full border border-[#00758e] justify-start px-8">
         <div class="h-full flex items-center w-full">
             <Image src={alsace_blason} alt="" class="h-3/4 max-sm:h-1/2 max-xl:h-3/5 w-auto" decoding="async" loading="lazy" width="75" height="75" />
-            <Image id="logo" src={meshtastic_logo} alt="website_logo" class="h-3/4 max-sm:h-1/3 max-sm:ml-1 max-xl:h-1/2 max-xl:ml-1 w-auto" decoding="async" loading="lazy" width="550" height="75" />
-            <p class="ml-2 text-5xl text-[#00758e] max-sm:text-2xl max-sm:ml-1 max-xl:text-4xl max-xl:ml-1">67</p>
+            <h1 class="font-title text-5xl max-xl:text-4xl max-sm:text-2xl text-[#00758e]">MESHTASTIC67</h1>
         </div>
         <ul class="flex gap-10 ml-16 max-sm:hidden">
             <a href="/"><li>Accueil</li></a>

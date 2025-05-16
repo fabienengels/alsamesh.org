@@ -1,7 +1,7 @@
 ---
 title: 'T 1000'
 'description': 'lorem ipsulm bakbkedkjehehdkehdekhdhek'
-'image': 'node.jpeg'
+'image': 'node_seb.jpg'
 
 links:
   - title: 'AliExpress Antenna'

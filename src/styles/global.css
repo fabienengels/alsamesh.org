@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'title';
+    src: url('../fonts/fearlogo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+.font-title {
+    font-family: "title", sans-serif;
+}
+
 .font-main {
     font-family: "Special Gothic Condensed One", sans-serif;
 }
