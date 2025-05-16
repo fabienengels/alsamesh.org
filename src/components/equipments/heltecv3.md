@@ -1,0 +1,25 @@
+---
+title: 'T 1000'
+'description': 'lorem ipsulm bakbkedkjehehdkehdekhdhek'
+'image': 'node.jpeg'
+
+links:
+  - title: 'AliExpress Antenna'
+    url: 'https://aliexpress.com'
+  - title: 'Amazon Option'
+    url: 'https://amazon.com'
+  - title: 'Google Docs'
+    url: 'https://docs.google.com'
+  - title: 'AliExpress Antenna'
+    url: 'https://aliexpress.com'
+  - title: 'Amazon Option'
+    url: 'https://amazon.com'
+  - title: 'Google Docs'
+    url: 'https://docs.google.com'
+  - title: 'AliExpress Antenna'
+    url: 'https://aliexpress.com'
+  - title: 'Amazon Option'
+    url: 'https://amazon.com'
+  - title: 'Google Docs'
+    url: 'https://docs.google.com'
+---

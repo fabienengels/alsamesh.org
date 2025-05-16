@@ -1,3 +1,12 @@
+---
+import { Image } from "astro:assets";
+import discord_logo from "../images/discord_logo.png"
+import meshtastic_logo from "../images/meshtastic_logo.svg"
+import node from "../images/node.jpeg"
+import nico from "../images/nico.jpeg"
+import mesh_example from "../images/mesh_example.jpg"
+import mesh_example2 from "../images/mesh_example2.jpeg"
+---
 <section class="w-full h-[1039px] bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
     <article class="w-[984px] h-[850px] bg-[#00758e] rounded-xl flex flex-col items-center p-8 ml-12 max-xl:ml-0 max-xl:w-[90%] max-xl:h-auto text-white font-main custom-shadow">
         <div class="w-full h-auto bg-white rounded-lg border-2 border-dashed border-[#00758e]">
@@ -12,31 +21,31 @@
         </ul>
         <p class="mt-20 text-xl">En plus du mesh en lui-même, nous avons un discord.</p>
         <a class="cursor-pointer mt-4" href="https://discord.gg/aRYWN5HwFU">
-            <img src="/discord_logo.png" alt="logo de discord"  class="h-[75px] p-2 rounded-xl custom-shadow bg-gray-50" />
+            <Image src={discord_logo} alt="logo de discord"  class="h-[75px] w-auto p-2 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy" width="300" height="100" />
         </a>
 
         <p class="mt-20 text-xl">Site officiel Meshtastic.</p>
         <a class="cursor-pointer mt-4" href="https://meshtastic.org/">
-            <img src="/meshtastic_logo.svg" alt="logo de discord"  class="h-[50px] p-2 rounded-xl custom-shadow bg-gray-50" />
+            <Image src={meshtastic_logo} alt="logo de discord"  class="h-[50px] w-auto p-2 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy" width="300" height="100" />
         </a>
     </article>
 
 
-    <div class="grid grid-cols-2 gap-2 w-[984px] h-[850px] mr-12 max-xl:mr-0 max-xl:w-[90%] max-sm:grid-cols-1 max-sm:h-auto">
+    <div class="grid grid-cols-2 gap-4 w-[984px] h-[850px] mr-12 max-xl:mr-0 max-xl:w-[90%] max-sm:grid-cols-1 max-sm:h-auto">
         <div>
-            <img class="h-[380px] w-[550px] rounded-lg object-cover custom-shadow" src="/mesh_example.jpg" alt="">
-            <div class="relative w-full h-[80px] bg-[#00758e]/75 bottom-20 flex justify-center items-center rounded-b-lg px-4 max-sm:hidden">
+            <Image class="h-[417px] w-[492px] rounded-lg object-cover custom-shadow" src={mesh_example} alt="" decoding="async" loading="lazy" width="492" height="417" />
+            <!--<div class="relative w-full h-[80px] bg-[#00758e]/75 bottom-20 flex justify-center items-center rounded-b-lg px-4 max-sm:hidden">
                 <p class="text-white text-xl font-main">Il y a actuellement une trentaine de nodes à Strasbourg.</p>
-            </div>
+            </div>-->
         </div>
         <div>
-            <img class="h-[380px] w-[550px] rounded-lg object-cover custom-shadow" src="/nico.jpeg" alt="">
+            <Image class="h-[417px] w-[492px] rounded-lg object-cover custom-shadow" src={nico} alt="" decoding="async" loading="lazy" width="492" height="417" />
         </div>
         <div>
-            <img class="h-[380px] w-[550px] rounded-lg object-cover custom-shadow" src="/node.jpeg" alt="">
+            <Image class="h-[417px] w-[492px] rounded-lg object-cover custom-shadow" src={node} alt="" decoding="async" loading="lazy" width="492" height="417" />
         </div>
         <div>
-            <img class="h-[380px] w-[550px] rounded-lg object-cover custom-shadow" src="/mesh_example2.jpeg" alt="">
+            <Image class="h-[417px] w-[492px] rounded-lg object-cover custom-shadow" src={mesh_example2} alt="" decoding="async" loading="lazy" width="492" height="417" />
         </div>
     </div>
 

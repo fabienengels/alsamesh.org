@@ -1,12 +1,13 @@
 ---
 import '../styles/global.css'
+import alsace_blason from "../images/alsace_blason.png"
 ---
 <!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/alsace_blason.png" />
+		<link rel="icon" type="image/png" href={alsace_blason.src} />
 		<meta name="generator" content={Astro.generator} />
 		<title>Meshtastic67.org</title>
 
@@ -18,6 +19,7 @@ import '../styles/global.css'
 	<body class="bg-gray-100">
 		<slot />
 	</body>
+	<script src="../scripts/toggleMenu.js"></script>
 </html>
 
 <style>
