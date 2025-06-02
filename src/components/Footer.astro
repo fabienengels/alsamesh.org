@@ -1,6 +1,10 @@
+---
+import { Image } from "astro:assets";
+import powered from '../images/powered.png'
+---
 <footer class="w-full h-[180px] bg-[#00758e] flex justify-center items-center text-white font-main text-lg">
     <ul class="text-center max-sm:my-8">
         <a href="https://discord.gg/aRYWN5HwFU"><li class="mb-6 underline decoration-dashed underline-offset-4">Notre discord</li></a>
-        <a href="https://meshtastic.org/"><img src="/powered.png" alt="meshtastic powered logo" class="w-60" width="" height="" />   </a>     
+        <a href="https://meshtastic.org/"><Image src={powered} alt="meshtastic powered logo" class="w-60" decoding="async" loading="lazy" width="300" height="100" /></a>     
     </ul>
 </footer>
