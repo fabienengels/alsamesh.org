@@ -26,31 +26,27 @@ import mesh_example2 from "../images/mesh_example2.jpeg"
     </div>
 </section>
 
-<section class="w-full h-[1039px] bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
-    <article class="w-[984px] h-[850px] bg-[#00758e] rounded-xl flex flex-col items-center p-8 ml-12 max-xl:ml-0 max-xl:w-[90%] max-xl:h-auto text-white font-main custom-shadow">
-        <div class="w-full h-auto bg-white rounded-lg border-2 border-dashed border-[#00758e]">
-            <h2 class="text-[#00758e] text-center text-3xl p-2">La communauté Meshtastic en Alsace</h2>
-        </div>
+<section class="w-full h-auto bg-[#00758e] flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+    <div class="w-[90%] max-w-[984px] text-white flex flex-col items-center justify-center font-main">
+
         <h3 class="text-3xl mb-8 mt-12">Nos objectifs</h3>
         <ul class="list-disc text-2xl">
             <li>Permettre le développement d'un mesh couvrant l'Alsace.</li>
             <li>Créer une communauté soudée autour du mesh.</li>
             <li>Proposer de nouveaux emplacement pour l'installation de nodes permettant d'étendre la couverture de l'Alsace.</li>
-            <li>Que vous utilisiez la fréquence 433 ou 868, vous êtes les bienvenus.</li>
+            <li>La fréquence 868 de préférence, mais la 433 aussi le bienvenue.</li>
         </ul>
-        <p class="mt-20 text-xl">En plus du mesh en lui-même, nous avons un discord.</p>
-        <a class="cursor-pointer mt-4" href="https://discord.gg/aRYWN5HwFU">
-            <Image src={discord_logo} alt="logo de discord"  class="h-[75px] w-auto p-2 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy" width="300" height="100" />
-        </a>
 
         <p class="mt-20 text-xl">Site officiel Meshtastic.</p>
-        <a class="cursor-pointer mt-4" href="https://meshtastic.org/">
+        <a class="cursor-pointer mt-4 mb-12" href="https://meshtastic.org/">
             <Image src={meshtastic_logo} alt="logo de discord"  class="h-[50px] w-auto p-2 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy" width="300" height="100" />
         </a>
-    </article>
+    </div>
+</section>
 
+<section class="w-full h-[1039px] bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
 
-    <div class="grid grid-cols-2 gap-4 w-[984px] h-[850px] mr-12 max-xl:mr-0 max-xl:w-[90%] max-sm:grid-cols-1 max-sm:h-auto">
+    <div class="grid grid-cols-2 gap-4 w-[984px] h-[850px] max-xl:mr-0 max-xl:w-[90%] max-sm:grid-cols-1 max-sm:h-auto">
         <div>
             <Image class="h-[417px] w-[492px] rounded-lg object-cover custom-shadow" src={mesh_example} alt="" decoding="async" loading="lazy" width="492" height="417" />
         </div>
