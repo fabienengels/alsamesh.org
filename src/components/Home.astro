@@ -5,9 +5,10 @@ import node from "../images/node.jpeg"
 import nico from "../images/nico.jpeg"
 import mesh_example from "../images/mesh_example.jpg"
 import mesh_example2 from "../images/mesh_example2.jpeg"
+import config_image from "../images/config.jpg"
 ---
 
-<section id="hero" class="w-full h-auto mt-32 bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+<section id="hero" class="font-main w-full h-auto mt-32 bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
     <div class="w-[90%] max-w-[984px]">
 
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">La communauté Meshtastic en Alsace</h1>
@@ -25,15 +26,15 @@ import mesh_example2 from "../images/mesh_example2.jpeg"
     </div>
 </section>
 
-<section id="objectifs" class="w-full h-auto bg-[#00758e] flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+<section id="objectifs" class="font-main w-full h-auto bg-[#00758e] flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
     <div class="w-[90%] max-w-[984px] text-white flex flex-col items-center justify-center font-normal">
 
         <h3 class="text-3xl mb-12 mt-12 font-extrabold">Nos objectifs</h3>
         <ul class="list-disc text-2xl">
             <li>Permettre le développement d'un mesh couvrant l'Alsace.</li>
             <li>Créer une communauté soudée autour du mesh.</li>
-            <li>Proposer de nouveaux emplacement pour l'installation de nodes permettant d'étendre la couverture de l'Alsace.</li>
-            <li>La fréquence 868 de préférence, mais la 433 aussi le bienvenue.</li>
+            <li>Proposer de nouveaux emplacements pour l'installation de nodes permettant d'étendre la couverture de l'Alsace.</li>
+            <li>La fréquence 868 de préférence, mais la 433 aussi la bienvenue.</li>
         </ul>
 
 
@@ -42,6 +43,9 @@ import mesh_example2 from "../images/mesh_example2.jpeg"
         <a class="cursor-pointer mt-4 mb-12" href="https://meshtastic.org/">
             <Image src={meshtastic_logo} alt="logo de discord"  class="h-[50px] w-auto p-2 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy" width="300" height="100" />
         </a>
+
+        <h3 class="text-3xl mt-12 font-extrabold">Configuration du node</h3>
+        <Image src={config_image} alt="logo de discord"  class="mt-8 mb-12 h-[250px] w-auto rounded-xl custom-shadow" decoding="async" loading="lazy" width="300" height="100" />
     </div>
 </section>
 
@@ -70,6 +74,6 @@ import mesh_example2 from "../images/mesh_example2.jpeg"
     }
 
     #objectifs {
-        background-image: url("../images/background.svg");
+        background-image: url("../images/background6.svg");
     }
 </style>

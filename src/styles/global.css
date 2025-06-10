@@ -5,14 +5,28 @@
     src: url('../fonts/fearlogo.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }  
+}  
+
+@font-face {
+    font-family: 'luciole-bold';
+    src: url('../fonts/Luciole-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'luciole-regular';
+    src: url('../fonts/Luciole-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
 
 .font-title {
     font-family: "title", sans-serif;
 }
 
 .font-main {
-    font-family: "Special Gothic Condensed One", sans-serif;
+    font-family: "luciole-regular", sans-serif;
 }
 
 .custom-shadow {
