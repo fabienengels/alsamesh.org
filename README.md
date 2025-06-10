@@ -21,5 +21,5 @@ bun dev
 cd meshtastic67.org
 docker build -t meshtastic67.org .
 
-docker run --it --rm --name meshtastic -p 4321:4321 meshtastic67.org
+docker run -it --rm -p 4321:4321 meshtastic67.org
 ```
