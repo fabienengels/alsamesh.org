@@ -1,47 +1,50 @@
 ---
 import Image from "astro/components/Image.astro";
-const equipments = Object.values(import.meta.glob('./equipments/*.md', { eager: true }));
+
+// Get the equipments array from the frontmatter of the single markdown file
+const equipmentsFile = Object.values(import.meta.glob('../content/equipments.md', { eager: true }))[0];
+const equipments = equipmentsFile.frontmatter.equipments;
 ---
 
 <section class="font-main w-full h-auto min-h-[1039px] bg-gray-100 flex flex-col items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
-    <div class="w-[90%] max-w-[984px] mt-24">
-        {equipments.map(equipment => {
-            const imagePath = equipment.frontmatter.image
-              ? `/src/images/equipments/${equipment.frontmatter.image}`
-              : null;
-      
-            return (
-              <div class="w-full border-b border-[#00758e] mb-16">
-                <h1 class="font-semibold text-gray-700">{equipment.frontmatter.title}</h1>
-                <p class="text-gray-500">{equipment.frontmatter.description}</p>
-      
-                {imagePath && (
-                  <Image
-                    src={imagePath}
-                    alt={equipment.frontmatter.title}
-                    class="w-auto my-4 h-[300px]"
-                    decoding="async"
-                    loading="lazy"
-                    height="300"
-                    width="300"
-                  />
-                )}
-      
-                {equipment.frontmatter.links && equipment.frontmatter.links.length > 0 && (
-                  <ul class="list-disc pl-5 my-4">
-                    {equipment.frontmatter.links.map(link => (
-                      link.url && link.title && (
-                        <li>
-                          <a href={link.url} class="text-[#00758e]" target="_blank" rel="noopener noreferrer">
-                            {link.title}
-                          </a>
-                        </li>
-                      )
-                    ))}
-                  </ul>
-                )}
-              </div>
-            );
-          })}
-    </div>
+  <div class="w-[90%] max-w-[984px] mt-24">
+    {equipments.map(equipment => {
+      const imagePath = equipment.image
+        ? `/src/content/images/${equipment.image}`
+        : null;
+
+      return (
+        <div class="w-full border-b border-[#00758e] mb-16">
+          <h1 class="font-semibold text-gray-700 text-2xl">{equipment.title}</h1>
+          <p class="text-gray-500">{equipment.description}</p>
+
+          {imagePath && (
+            <Image
+              src={imagePath}
+              alt={equipment.title}
+              class="w-auto my-4 h-[300px]"
+              decoding="async"
+              loading="lazy"
+              height="300"
+              width="300"
+            />
+          )}
+
+          {equipment.links && equipment.links.length > 0 && (
+            <ul class="list-disc pl-5 my-4">
+              {equipment.links.map(link => (
+                link.url && link.title && (
+                  <li>
+                    <a href={link.url} class="text-[#00758e]" target="_blank" rel="noopener noreferrer">
+                      {link.title}
+                    </a>
+                  </li>
+                )
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    })}
+  </div>
 </section>
