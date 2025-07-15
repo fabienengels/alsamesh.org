@@ -23,3 +23,7 @@ docker build -t meshtastic67.org .
 
 docker run --detach --name meshtastic -p PORT:4321 meshtastic67.org
 ```
+
+## Adding Hardware
+edit /src/content/equipments.md
+put corresponding image in /public/

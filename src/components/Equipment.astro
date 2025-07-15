@@ -10,7 +10,7 @@ const equipments = equipmentsFile.frontmatter.equipments;
   <div class="w-[90%] max-w-[984px] mt-24">
     {equipments.map(equipment => {
       const imagePath = equipment.image
-        ? `/src/content/images/${equipment.image}`
+        ? `/${equipment.image}`
         : null;
 
       return (
