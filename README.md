@@ -26,4 +26,5 @@ docker run --detach --name meshtastic -p PORT:4321 meshtastic67.org
 
 ## Adding Hardware
 edit /src/content/equipments.md
+<br>
 put corresponding image in /public/
