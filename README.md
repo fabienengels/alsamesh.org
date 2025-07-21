@@ -1,4 +1,4 @@
-# Meshtastic67.org
+# alsamesh.org
 
 ![screenshot](readme-image.webp)
 
@@ -10,7 +10,7 @@ You can join our Discord using this link :
 ## Development commands
 ```sh
 git clone PROJECT
-cd meshtastic67.org
+cd alsamesh.org
 
 bun install
 bun dev
@@ -18,10 +18,10 @@ bun dev
 
 ## Docker
 ```sh
-cd meshtastic67.org
-docker build -t meshtastic67.org .
+cd alsamesh.org
+docker build -t alsamesh.org .
 
-docker run -it --rm -p 4321:4321 meshtastic67.org
+docker run -it --rm -p 4321:4321 alsamesh.org
 ```
 
 ## Adding Hardware
