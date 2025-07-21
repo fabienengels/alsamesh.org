@@ -7,9 +7,9 @@ equipments:
 
       links:
         - title: 'Lien pour la carte de développement sur AliExpress (Attention: selectionnez la bonne fréquence / avec ou sans GNSS / avec ou sans boitier)'
-          url: 'https://fr.aliexpress.com/item/1005007556646669.html?spm=a2g0o.productlist.main.10.7a992Ufd2UfdPs&algo_pvid=b7c403cc-7ebb-433d-8633-5a227575d219&algo_exp_id=b7c403cc-7ebb-433d-8633-5a227575d219-9&pdp_ext_f=%7B%22order%22%3A%22194%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21EUR%2157.32%2134.39%21%21%2163.92%2138.35%21%402103835e17491281970532228e9c55%2112000041287902967%21sea%21FR%216284204881%21X&curPageLogUid=xT4asTGdVbBq&utparam-url=scene%3Asearch%7Cquery_from%3A'
+          url: 'https://fr.aliexpress.com/item/1005007556646669.html'
         - title: 'Antenne Gizont sur AliExpress (Sélectionnez la bonne fréquence)'
-          url: 'https://fr.aliexpress.com/item/1005004607615001.html?spm=a2g0o.productlist.main.3.13aa35b2KycFtq&algo_pvid=4747e47c-6c11-46da-9d31-f121c5244470&algo_exp_id=4747e47c-6c11-46da-9d31-f121c5244470-2&pdp_ext_f=%7B%22order%22%3A%221628%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21EUR%216.99%216.99%21%21%217.79%217.79%21%402103864c17491283715997037e65a4%2112000029810956285%21sea%21FR%216284204881%21X&curPageLogUid=iyAPw7wVj4Sy&utparam-url=scene%3Asearch%7Cquery_from%3A'
+          url: 'https://fr.aliexpress.com/item/1005004607615001.html'
         - title: 'Boitiers 3D imprimables'
           url: 'https://www.yeggi.com/q/heltec+t114/'
 
@@ -20,7 +20,7 @@ equipments:
 
       links:
         - title: 'Acheter sur AliExpress'
-          url: 'https://www.aliexpress.us/item/1005007474293141.html?gatewayAdapt=4itemAdapt'
+          url: 'https://www.aliexpress.us/item/1005007474293141.html'
 
     # TDECK
     - title: 'Lilygo T-Deck'

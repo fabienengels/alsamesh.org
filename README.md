@@ -21,7 +21,7 @@ bun dev
 cd meshtastic67.org
 docker build -t meshtastic67.org .
 
-docker run --detach --name meshtastic -p PORT:4321 meshtastic67.org
+docker run -it --rm -p 4321:4321 meshtastic67.org
 ```
 
 ## Adding Hardware
