@@ -1,6 +1,6 @@
 # Meshtastic67.org
 
-![screenshot](readme-image.png)
+![screenshot](readme-image.webp)
 
 ## Description
 This static website page aims at promoting Meshtastic community in Alsace.

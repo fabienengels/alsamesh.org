@@ -3,7 +3,7 @@ equipments:
     # T114
     - title: 'Heltec T114'
       'description': "Le Mesh Node T114 est une carte de développement à faible consommation d'énergie basée sur les puces nRF52840 et SX1262, prenant en charge LoRa et Bluetooth 5.0. Elle intègre diverses interfaces d'alimentation (USB 5V, batterie lithium et panneau solaire), un écran TFT de 1,14 pouces en option, ainsi qu’un module GPS en tant qu'accessoire. Elle offre de puissantes capacités de communication longue distance, une grande extensibilité, et une conception à faible consommation. Grâce à l'environnement de développement et aux bibliothèques Heltec nRF52, vous pouvez l’utiliser pour des projets de développement LoRa/LoRaWAN, ainsi que pour faire fonctionner certains projets open source tels que Meshtastic."
-      'image': 'node_seb.jpg'
+      'image': 'node_seb.webp'
 
       links:
         - title: 'Lien pour la carte de développement sur AliExpress (Attention: selectionnez la bonne fréquence / avec ou sans GNSS / avec ou sans boitier)'
@@ -16,7 +16,7 @@ equipments:
     # T1000
     - title: 'T1000'
       'description': "Format de carte qui se glisse facilement en poche. Equipé d'un capteur de température."
-      'image': 't1000.jpeg'
+      'image': 't1000.webp'
 
       links:
         - title: 'Acheter sur AliExpress'
