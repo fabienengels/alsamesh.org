@@ -27,4 +27,4 @@ docker run -it --rm -p 4321:4321 meshtastic67.org
 ## Adding Hardware
 edit /src/content/equipments.md
 <br>
-put corresponding image in /public/
+put corresponding image in /src/assets/content-images

@@ -1,17 +1,28 @@
 ---
 import Image from "astro/components/Image.astro";
 
-// Get the equipments array from the frontmatter of the single markdown file
-const equipmentsFile = Object.values(import.meta.glob('../content/equipments.md', { eager: true }))[0];
+// Auto-import all images from src/assets/images
+const imageModules = import.meta.glob('../assets/content-images/*.{jpg,jpeg,png,webp}', { eager: true });
+
+// Get the equipments array from the frontmatter of the markdown file
+const equipmentsFile = Object.values(
+  import.meta.glob('../content/equipments.md', { eager: true })
+)[0];
 const equipments = equipmentsFile.frontmatter.equipments;
+
+// Helper function to find image by filename
+function getImagePath(filename) {
+  const entry = Object.entries(imageModules).find(([path]) =>
+    path.endsWith(`/` + filename)
+  );
+  return entry?.[1]?.default || null;
+}
 ---
 
 <section class="font-main w-full h-auto min-h-[1039px] bg-gray-100 flex flex-col items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
   <div class="w-[90%] max-w-[984px] mt-24">
     {equipments.map(equipment => {
-      const imagePath = equipment.image
-        ? `/${equipment.image}`
-        : null;
+      const imagePath = getImagePath(equipment.image);
 
       return (
         <div class="w-full border-b border-[#00758e] mb-16">
