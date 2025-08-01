@@ -1,0 +1,61 @@
+---
+import Image from "astro/components/Image.astro";
+
+// Auto-import all images from src/assets/images
+const imageModules = import.meta.glob('../assets/content-images/*.{jpg,jpeg,png,webp}', { eager: true });
+
+// Get the equipments array from the frontmatter of the markdown file
+const equipmentsFile = Object.values(
+  import.meta.glob('../content/equipments.md', { eager: true })
+)[0];
+const equipments = equipmentsFile.frontmatter.equipments;
+
+// Helper function to find image by filename
+function getImagePath(filename) {
+  const entry = Object.entries(imageModules).find(([path]) =>
+    path.endsWith(`/` + filename)
+  );
+  return entry?.[1]?.default || null;
+}
+---
+
+<section class="font-main w-full h-auto min-h-[1039px] bg-gray-100 flex flex-col items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+  <div class="w-[90%] max-w-[984px] mt-24">
+    {equipments.map(equipment => {
+      const imagePath = getImagePath(equipment.image);
+
+      return (
+        <div class="w-full border-b border-main mb-16">
+          <h1 class="font-semibold text-gray-700 text-2xl">{equipment.title}</h1>
+          <p class="text-gray-500">{equipment.description}</p>
+
+          {imagePath && (
+            <Image
+              src={imagePath}
+              alt={equipment.title}
+              class="w-auto my-4 h-[300px]"
+              decoding="async"
+              loading="lazy"
+              height="300"
+              width="300"
+            />
+          )}
+
+          {equipment.links && equipment.links.length > 0 && (
+            <ul class="list-disc pl-5 my-4">
+              {equipment.links.map(link => (
+                link.url && link.title && (
+                  <li>
+                    <a href={link.url} class="text-main" target="_blank" rel="noopener noreferrer">
+                      {link.title}
+                    </a>
+                  </li>
+                )
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</section>
