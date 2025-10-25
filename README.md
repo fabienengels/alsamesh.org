@@ -25,6 +25,6 @@ docker run -it --rm -p 4321:4321 alsamesh.org
 ```
 
 ## Adding Hardware
-edit /src/content/equipments.md
+edit /src/pages/equipment.mdx
 <br>
 put corresponding image in /src/assets/content-images
