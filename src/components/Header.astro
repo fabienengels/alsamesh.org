@@ -1,6 +1,16 @@
 ---
 import Image from "astro/components/Image.astro"
 import discord_logo from "../assets/images/discord_logo.webp"
+
+// Define what items you want in the top menu bar
+const menuItems = [
+  {title: "Accueil", link:"/"},
+  {title: "Rejoindre", link:"/join"},
+  {title: "Matériel", link:"/equipment"}
+];
+
+// Define the discord invite link here
+const discordLink = "https://discord.gg/aRYWN5HwFU";
 ---
 
 <header class="mx-auto w-[95%] max-w-[984px] h-[70px] bg-gray-100 flex items-center justify-center">
@@ -9,11 +19,12 @@ import discord_logo from "../assets/images/discord_logo.webp"
             <h1 class="font-title text-5xl max-xl:text-4xl max-sm:text-2xl text-main">AlsaMesh</h1>
         </div>
         <ul class="flex gap-10 ml-16 max-sm:hidden text-main font-semibold font-main">
-            <a href="/"><li>Accueil</li></a>
-            <a href="/equipment"><li>Matériel</li></a>
-            <a href="https://discord.gg/aRYWN5HwFU" class="w-[100px]">
-                <Image src={discord_logo} alt="logo de discord"  class="w-auto px-2 border border-main rounded-sm shadow-sm bg-white" decoding="async" loading="lazy" width="300" height="100" />
-            </a>
+          {menuItems.map(item => (
+                        <a href={item.link}><li>{item.title}</li></a>
+          ))}
+          <a href={discordLink} class="w-[100px]">
+              <Image src={discord_logo} alt="logo de discord"  class="w-auto px-2 border border-main rounded-sm shadow-sm bg-white" decoding="async" loading="lazy" width="300" height="100" />
+          </a>
         </ul>
         <button id="toggleOpen" class="sm:hidden cursor-pointer" type="button" data-popover-target="menu" onclick="toggleMenu()">
             <svg id="menu-cross" class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -25,17 +36,14 @@ import discord_logo from "../assets/images/discord_logo.webp"
             </svg>
         </button>
         <ul id="menu" role="menu" data-popover="menu" data-popover-placement="bottom" class="absolute z-10 min-w-[180px] w-full overflow-auto bg-main-black text-gray-700 p-1.5 shadow-lg border-b border-main focus:outline-none top-[100px] right-0 sm:hidden bg-white hidden">
-            <a href="/">
-              <li role="menuitem" class="cursor-pointer text-gray-700 flex w-full text-sm items-center rounded-md p-3 transition-all hover:text-gray-700 focus:text-gray-700 active:text-gray-700 hover:bg-main-green focus:bg-main-green active:bg-main-green">
-                Accueil
-              </li>
-            </a>
-            <a href="/equipment">
-              <li role="menuitem" class="cursor-pointer text-gray-700 flex w-full text-sm items-center rounded-md p-3 transition-all hover:text-gray-700 focus:text-gray-700 active:text-gray-700 hover:bg-main-green focus:bg-main-green active:bg-main-green">
-                Matériel
-              </li>
-            </a>
-            <a href="https://discord.gg/aRYWN5HwFU">
+            {menuItems.map(item => (
+              <a href={item.link}>
+                <li role="menuitem" class="cursor-pointer text-gray-700 flex w-full text-sm items-center rounded-md p-3 transition-all hover:text-gray-700 focus:text-gray-700 active:text-gray-700 hover:bg-main-green focus:bg-main-green active:bg-main-green">
+                  {item.title}</li>
+                </a>
+            ))}
+        
+            <a href={discordLink}>
               <li role="menuitem" class="cursor-pointer text-gray-700 flex w-full text-sm items-center rounded-md p-3 transition-all hover:text-gray-700 focus:text-gray-700 active:text-gray-700 hover:bg-main-green focus:bg-main-green active:bg-main-green">
                 <Image src={discord_logo} alt="logo de discord"  class="h-[50px] w-auto px-2 border border-main rounded-sm shadow-sm bg-white" decoding="async" loading="lazy" width="300" height="100" />
               </li>

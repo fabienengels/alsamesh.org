@@ -1,0 +1,35 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from "../components/Footer.astro"
+
+const {frontmatter} = Astro.props;
+
+---
+
+<Layout>
+	<Header />
+	<section class="font-main w-full h-auto min-h-[1039px] bg-gray-100 flex flex-col items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+		<div class="w-[90%] max-w-[984px] mt-12">
+		 	<div class="w-full border-b border-main mb-16">
+
+				<div class="prose dark:prose-invert
+						prose-h2:font-semibold prose-h2:text-2xl prose-h2:text-gray-700
+						prose-a:text-blue-600 prose-p:text-gray-500 prose-img:rounded-xl
+						prose-ul:text-gray-500
+						prose-a:text-mesh
+						mx-auto
+						">
+					<h1 class="font-semibold text-gray-800">{frontmatter.title}</h1>
+					 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						{frontmatter.subtitle}
+					 </p>
+					<slot />
+				</div>
+
+			</div>
+		</div>	
+	</section>
+	<Footer />
+</Layout>
+
