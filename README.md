@@ -1,4 +1,4 @@
-# alsamesh.org
+# alsamesh.org (ui-rework)
 
 ![screenshot](readme-image.webp)
 

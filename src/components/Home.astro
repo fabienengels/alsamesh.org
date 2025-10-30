@@ -1,68 +1,115 @@
 ---
-import { Image } from "astro:assets";
+import {Image} from "astro:assets";
 import meshtastic_logo from "../assets/images/meshtastic_logo.svg"
 import node from "../assets/images/node.webp"
 import nico from "../assets/images/nico.webp"
 import mesh_example from "../assets/images/mesh_example.webp"
 import mesh_example2 from "../assets/images/mesh_example2.webp"
 import config_image from "../assets/images/config.webp"
+import AlsaceShape from "./AlsaceShape.astro";
 ---
 
-<section id="hero" class="font-main w-full h-auto mt-32 bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+<section id="hero"
+         class="font-main w-full h-auto mt-32 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12 relative">
     <div class="w-[90%] max-w-[984px]">
 
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">La communauté Meshtastic en Alsace</h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Nous souhaitons voir l'apparition d'un réseau robuste couvrant la région.</p>
-        <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <a href="https://discord.gg/aRYWN5HwFU" class="bg-main inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Notre Discord
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-            <a href="/equipment" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Notre matériel
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>  
+        <div class="flex flex-col items-center gap-3 mb-8 text-center">
+            <h1 class="mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+                AlsaMesh</h1>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight leading-none text-white">La
+                communauté Meshtastic d'Alsace</h2>
+            <p class="text-lg font-normal text-gray-400">
+                Ensemble, créons un maillage de communication libre et résilient à travers l'Alsace.
+            </p>
         </div>
+
+
+        <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="https://discord.gg/aRYWN5HwFU"
+               target="_blank"
+               class="flex justify-center items-center gap-2 py-3 px-5 text-white rounded-lg hover:bg-indigo-800 transition">
+                <i class="fab fa-discord"></i>
+                Notre Discord
+            </a>
+            <a href="/equipment"
+               class="flex justify-center items-center gap-2 py-3 px-5 text-white rounded-lg border border-neutral-700 hover:bg-neutral-800 transition">
+                Notre matériel
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="max-xl:hidden absolute top-0 right-9 z-[-1] mt-[-150px] w-1/3 max-w-lg">
+        <AlsaceShape/>
     </div>
 </section>
 
-<section id="objectifs" class="font-main w-full h-auto bg-main flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+<section id="objectifs"
+         class="font-main w-full h-auto flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
     <div class="w-[90%] max-w-[984px] text-white flex flex-col items-center justify-center font-normal">
 
         <h3 class="text-3xl mb-12 mt-12 font-extrabold">Nos objectifs</h3>
-        <ul class="list-disc text-2xl">
-            <li>Permettre le développement d'un mesh couvrant l'Alsace.</li>
-            <li>Créer une communauté soudée autour du mesh.</li>
-            <li>Proposer de nouveaux emplacements pour l'installation de nodes permettant d'étendre la couverture de l'Alsace.</li>
-            <li>La fréquence 868 de préférence, mais la 433 aussi la bienvenue.</li>
+        <ul class="space-y-4 list-none pl-0">
+            <li class="flex items-center gap-3 bg-neutral-800/50 p-4 rounded-lg hover:bg-neutral-800 transition-all">
+                <i class="fas fa-network-wired text-emerald-500"></i>
+                <span>Déployer un réseau mesh robuste couvrant l'ensemble du territoire alsacien.</span>
+            </li>
+            <li class="flex items-center gap-3 bg-neutral-800/50 p-4 rounded-lg hover:bg-neutral-800 transition-all">
+                <i class="fas fa-users text-emerald-500"></i>
+                <span>Fédérer une communauté active et dynamique autour du projet mesh.</span>
+            </li>
+            <li class="flex items-center gap-3 bg-neutral-800/50 p-4 rounded-lg hover:bg-neutral-800 transition-all">
+                <i class="fas fa-map-pin text-emerald-500"></i>
+                <span>Identifier et développer des points stratégiques pour optimiser la couverture du réseau en Alsace.</span>
+            </li>
+            <li class="flex items-center gap-3 bg-neutral-800/50 p-4 rounded-lg hover:bg-neutral-800 transition-all">
+                <i class="fas fa-signal text-emerald-500"></i>
+                <span>Privilégier la fréquence 868MHz tout en restant ouvert avec au 433MHz.</span>
+            </li>
         </ul>
 
 
         <h3 class="text-3xl mt-24 font-extrabold">Vous découvrez Meshtastic ?</h3>
-        <p class="mt-8 text-xl">Site officiel Meshtastic.</p>
-        <a class="cursor-pointer mt-4 mb-12" href="https://meshtastic.org/">
-            <Image src={meshtastic_logo} alt="logo de discord"  class="h-[50px] w-auto p-2 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy" width="300" height="100" />
-        </a>
+        <div class="mt-8 flex flex-col items-center text-center">
+            <p class="text-lg mb-6">Meshtastic est un projet open-source permettant de créer des réseaux de
+                communication sans fil longue portée et résilients. Les appareils fonctionnent de manière autonome et
+                peuvent former un maillage pour étendre la portée du réseau.</p>
+            <p class="text-base mb-8">Découvrez toutes les informations sur le projet, la documentation et les ressources
+                sur le site officiel :</p>
+            <a class="cursor-pointer hover:opacity-90 transition-opacity" href="https://meshtastic.org/"
+               target="_blank">
+                <Image src={meshtastic_logo} alt="Logo Meshtastic"
+                       class="h-[60px] w-auto p-3 rounded-xl custom-shadow bg-gray-50" decoding="async" loading="lazy"
+                       width="300" height="100"/>
+            </a>
+            <p class="text-sm text-gray-400 mt-4 mb-12">meshtastic.org</p>
+        </div>
 
         <h3 class="text-3xl mt-12 font-extrabold">Configuration du node</h3>
-        <Image src={config_image} alt="logo de discord"  class="mt-8 mb-12 h-[250px] w-auto rounded-xl custom-shadow" decoding="async" loading="lazy" width="300" height="100" />
+        <Image src={config_image} alt="logo de discord" class="mt-8 mb-12 h-[250px] w-auto rounded-xl custom-shadow"
+               decoding="async" loading="lazy" width="300" height="100"/>
     </div>
 </section>
 
-<section class="w-full h-[1039px] bg-gray-100 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
+<section
+        class="w-full h-[1039px] bg-neutral-900 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
 
     <div class="grid grid-cols-2 gap-4 w-[984px] h-[850px] max-xl:mr-0 max-xl:w-[90%] max-sm:grid-cols-1 max-sm:h-auto">
         <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={mesh_example} alt="" decoding="async" loading="lazy" width="492" height="417" />
+            <Image class="h-[417px] w-[492px] object-cover" src={mesh_example} alt="" decoding="async" loading="lazy"
+                   width="492" height="417"/>
         </div>
         <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={nico} alt="" decoding="async" loading="lazy" width="492" height="417" />
+            <Image class="h-[417px] w-[492px] object-cover" src={nico} alt="" decoding="async" loading="lazy"
+                   width="492" height="417"/>
         </div>
         <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={node} alt="" decoding="async" loading="lazy" width="492" height="417" />
+            <Image class="h-[417px] w-[492px] object-cover" src={node} alt="" decoding="async" loading="lazy"
+                   width="492" height="417"/>
         </div>
         <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={mesh_example2} alt="" decoding="async" loading="lazy" width="492" height="417" />
+            <Image class="h-[417px] w-[492px] object-cover" src={mesh_example2} alt="" decoding="async" loading="lazy"
+                   width="492" height="417"/>
         </div>
     </div>
 
