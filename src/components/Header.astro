@@ -33,7 +33,7 @@ const currentRouteIndex = menuItems.findIndex(i => i.link === Astro.url.pathname
             role="menu"
             data-popover="menu"
             data-popover-placement="bottom"
-            class="flex max-md:flex-col items-center gap-4 max-md:col-span-2 max-md:hidden transition-all col-span-4 w-full">
+            class="flex max-md:flex-col items-center gap-4 max-md:col-span-4 max-md:hidden transition-all col-span-4 w-full">
             {menuItems.map((item, index) => (
                     <li role="menuitem"
                         class="cursor-pointer p-2 hover:bg-neutral-900 rounded-xl transition-all"
