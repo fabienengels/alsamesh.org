@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.css";
-/*@plugin '@tailwindcss/typography';*/
+@plugin '@tailwindcss/typography';
 
 /* Define dark m ode pattern */
 @custom-variant dark (&:where(.dark, .dark *));
