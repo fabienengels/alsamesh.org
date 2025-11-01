@@ -4,32 +4,32 @@ import Layout from '../layouts/Layout.astro';
 import Footer from "../components/Footer.astro"
 
 const {frontmatter} = Astro.props;
-
 ---
 
 <Layout>
-	<Header />
-	<section class="font-main w-full h-auto min-h-[1039px] bg-gray-100 flex flex-col items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
-		<div class="w-[90%] max-w-[984px] mt-12">
-		 	<div class="w-full border-b border-main mb-16">
-
-				<div class="prose dark:prose-invert
-						prose-h2:font-semibold prose-h2:text-2xl prose-h2:text-gray-700
-						prose-a:text-blue-600 prose-p:text-gray-500 prose-img:rounded-xl
-						prose-ul:text-gray-500
-						prose-a:text-mesh
-						mx-auto
-						">
-					<h1 class="font-semibold text-gray-800">{frontmatter.title}</h1>
-					 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-						{frontmatter.subtitle}
-					 </p>
-					<slot />
-				</div>
-
-			</div>
-		</div>	
-	</section>
-	<Footer />
+    <Header/>
+    <section class="flex justify-center">
+        <div class="px-8 py-4 w-full max-w-4xl bg-neutral-900 sm:rounded-xl">
+            <div class="w-full border-b border-main mb-16">
+                <div>
+                    <h1 class="text-xl md:text-3xl font-bold text-white">{frontmatter.title}</h1>
+                    <h2 class="text-md md:text-lg text-gray-400">{frontmatter.subtitle}</h2>
+                </div>
+                <hr class="text-gray-500 my-4 mx-8">
+                <div class="text-white w-full max-w-full prose
+                prose-h2:text-lg prose-h2:lg:text-xl prose-h2:text-white prose-h2:mb-0
+                prose-h3:text-md prose-h3:lg:text-lg prose-h3:text-white prose-h3:mb-0
+                prose-a:text-green-400 prose-a:decoration-dashed prose-a:hover:text-green-300 prose-a:transition
+                prose-strong:font-semibold prose-strong:text-gray-100
+                prose-em:bg-orange-400/20 prose-em:border prose-em:border-orange-400 prose-em:rounded prose-em:p-2 prose-em:inline-block
+                prose-p:text-justify
+                prose-code:text-green-100 prose-code:bg-neutral-800 prose-code:px-2 prose-code:py-1 prose-code:rounded-lg prose-code:border prose-code:border-neutral-700 prose-code:before:hidden prose-code:after:hidden
+                ">
+                    <slot/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <Footer/>
 </Layout>
 
