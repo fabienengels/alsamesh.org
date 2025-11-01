@@ -11,7 +11,7 @@ const menuItems = [
     {title: "Matériel", icon: "fas fa-tower-cell", link: "/equipment"},
     {title: "Discord", icon: "fab fa-discord", link: discordLink, target: "_blank"}
 ];
-const currentRouteIndex = 0;
+const currentRouteIndex = menuItems.findIndex(i => i.link === Astro.url.pathname);
 ---
 
 <header class="flex items-center justify-center mt-4 mb-8 select-none">
