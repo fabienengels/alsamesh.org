@@ -1,12 +1,53 @@
 ---
 import {Image} from "astro:assets";
 import meshtastic_logo from "../assets/images/meshtastic_logo.svg"
-import node from "../assets/images/node.webp"
-import nico from "../assets/images/nico.webp"
-import mesh_example from "../assets/images/mesh_example.webp"
-import mesh_example2 from "../assets/images/mesh_example2.webp"
 import config_image from "../assets/images/config.webp"
 import AlsaceShape from "./AlsaceShape.astro";
+
+import image1 from "../assets/images/carrousel/1.webp";
+import image2 from "../assets/images/carrousel/2.webp";
+import image3 from "../assets/images/carrousel/3.webp";
+import image4 from "../assets/images/carrousel/4.webp";
+import image5 from "../assets/images/carrousel/5.webp";
+import image6 from "../assets/images/carrousel/6.webp";
+import image7 from "../assets/images/carrousel/7.webp";
+import image8 from "../assets/images/carrousel/8.webp";
+import {shuffle} from "../utils/ArrayUtils";
+
+const images: { file: any; title: string }[] = shuffle([
+    {
+        file: image1,
+        title: "@ca08"
+    },
+    {
+        file: image3,
+        title: "@HKSB"
+    },
+    {
+        file: image7,
+        title: "@ari67"
+    },
+    {
+        file: image4,
+        title: "@HKSB"
+    },
+    {
+        file: image2,
+        title: "@ca08"
+    },
+    {
+        file: image6,
+        title: "@FAB1"
+    },
+    {
+        file: image5,
+        title: "@F4EGX"
+    },
+    {
+        file: image8,
+        title: "@F4MCT"
+    }
+]);
 ---
 
 <section id="hero"
@@ -104,7 +145,7 @@ import AlsaceShape from "./AlsaceShape.astro";
 
                 <button id="configToggleBtn"
                         class="flex items-center gap-2 py-2 px-4 text-white rounded bg-neutral-800 hover:bg-neutral-700 transition cursor-pointer">
-                <i class="fas fa-qrcode"></i>
+                    <i class="fas fa-qrcode"></i>
                     Afficher le QR-Code de configuration
                 </button>
             </div>
@@ -112,35 +153,30 @@ import AlsaceShape from "./AlsaceShape.astro";
     </div>
 </section>
 
-<section
-        class="w-full h-[1039px] bg-neutral-900 flex items-center justify-center gap-10 max-xl:flex-col max-xl:h-auto max-xl:py-12">
-
-    <div class="grid grid-cols-2 gap-4 w-[984px] h-[850px] max-xl:mr-0 max-xl:w-[90%] max-sm:grid-cols-1 max-sm:h-auto">
-        <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={mesh_example} alt="" decoding="async" loading="lazy"
-                   width="492" height="417"/>
-        </div>
-        <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={nico} alt="" decoding="async" loading="lazy"
-                   width="492" height="417"/>
-        </div>
-        <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={node} alt="" decoding="async" loading="lazy"
-                   width="492" height="417"/>
-        </div>
-        <div>
-            <Image class="h-[417px] w-[492px] object-cover" src={mesh_example2} alt="" decoding="async" loading="lazy"
-                   width="492" height="417"/>
+<section class="flex flex-col items-center justify-center">
+    <h3 class="text-3xl mb-8 text-white font-extrabold text-center">Galerie</h3>
+    <div class="w-full max-w-6xl shadow-2xl shadow-green-600/10">
+        <div class="relative overflow-hidden lg:rounded-xl">
+            <div class="flex space-x-3 animate-marquee">
+                <!-- Duplicate for marquee effect -->
+                {[images, images].flat().map(i => (
+                        <div class="flex-shrink-0 relative">
+                            <Image src={i.file} alt={i.title} class="h-64 lg:h-96 !w-auto inline-block rounded"/>
+                            <div class="absolute bottom-0 left-0 text-white font-semibold m-2 px-2 bg-neutral-900/70 rounded select-none">
+                                {i.title}
+                            </div>
+                        </div>
+                ))}
+            </div>
         </div>
     </div>
-
 </section>
 
 <div id="configDialog" class="fixed top-0 left-0 w-screen h-screen bg-black/80 z-10 hidden">
-<div class="relative w-full h-full">
+    <div class="relative w-full h-full">
         <div class="flex flex-col justify-center items-center gap-2 w-full h-full">
             <Image class="w-1/2 max-w-48"
-                   src={config_image} alt="QR Code de confirguration" />
+                   src={config_image} alt="QR Code de confirguration"/>
             <a class="text-gray-500 underline"
                href="https://meshtastic.org/e/#CgMSAQESDwgBOANAA0gBUBtoAcAGAQ"
                target="_blank">
@@ -161,6 +197,21 @@ import AlsaceShape from "./AlsaceShape.astro";
 
     #objectifs {
         background-image: url("../assets/images/background6.svg");
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 60s linear infinite;
     }
 </style>
 
