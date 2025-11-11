@@ -1,6 +1,6 @@
-# alsamesh.org (ui-rework)
+# alsamesh.org
 
-![screenshot](readme-image.webp)
+![screenshot](readme-image.png)
 
 ## Description
 This static website page aims at promoting Meshtastic community in Alsace.
