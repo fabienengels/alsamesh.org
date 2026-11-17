@@ -7,5 +7,5 @@ export const SITE_CONFIG = {
   locale: "fr_FR",
   ogSiteName: "AlsaMesh",
   discordLink: "https://discord.gg/aRYWN5HwFU",
-  mapUrl: "https://carte.alsamesh.org/?theme=dark&hide-title=true",
+  mapUrl: "https://telco.freeboxos.fr/embed/f8d25fd3-cef0-485d-85bf-5e34c192d839",
 };
